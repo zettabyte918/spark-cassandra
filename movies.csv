@@ -1,0 +1,11 @@
+movie_id,title,genres
+1,Movie 1,Action|Adventure
+2,Movie 2,Comedy|Drama
+3,Movie 3,Sci-Fi
+4,Movie 4,Romance|Comedy
+5,Movie 5,Action|Thriller
+6,Movie 6,Drama|Romance
+7,Movie 7,Comedy
+8,Movie 8,Horror
+9,Movie 9,Action|Sci-Fi
+10,Movie 10,Animation|Family

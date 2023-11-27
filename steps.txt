@@ -1,0 +1,18 @@
+# open spark
+spark-shell
+
+# open cassandra shell script
+cqlsh
+
+# tasna3 base de donner "keyspace"
+CREATE KEYSPACE movie_lens WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+use movie_lens;
+
+# tasna3 les 2 tableau
+CREATE TABLE movies(movie_id int PRIMARY KEY, title text, genres text);
+CREATE TABLE ratings(user_id int, movie_id int, rating double, timestamp bigint, primary key((user_id), movie_id));
+
+# taw bech t3abi les 2 tableau apartir min 2 ficher csv wa7da lil movies w lo5ra lil ratings
+COPY movies(movie_id, title, genres) FROM '/home/hossem/Desktop/dsi31/spark-cassandra/ratings.csv' WITH HEADER = true;
+COPY ratings(user_id, movie_id, rating, timestamp) FROM '/home/hossem/Desktop/dsi31/spark-cassandra/movies.csv' WITH HEADER = true;
+
